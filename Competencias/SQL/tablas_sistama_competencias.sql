@@ -29,7 +29,7 @@ CREATE TABLE usuarios (
     estado_civil varchar(50) NOT NULL,
     fecha_nacimiento date NOT NULL,
     fecha_actualizacion timestamp with time zone DEFAULT now() NOT NULL,
-    iamgen bytea NOT NULL,
+    imagen bytea NOT NULL,
     
     UNIQUE (email),
     PRIMARY KEY (usuario_id)
