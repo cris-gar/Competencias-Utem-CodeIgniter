@@ -1,0 +1,36 @@
+html {
+	/*overflow: hidden;*/
+}
+
+.resume {
+	background-color: #9c3;
+	border-radius: 15px 15px 15px 15px;
+	margin: 1cm 1cm 1cm 1cm;
+	overflow: hidden;
+	box-shadow: 2px 2px 10px #aaaaaa;
+	border: 4px 4px 4px 4px;
+	padding: 4px 4px 4px 4px;
+}
+
+.data {
+	border: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+}
+
+.img_perfil {
+	height: 30px;
+	width: 30px;
+}
+
+.data {
+	float: left;
+}
+
+.navigation {
+	border: 1px solid red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200%
+}
