@@ -28,7 +28,7 @@
 					</li>
 					<li><a href="#"><strong>Académicos</strong> </a></li>
 					<li><a href="#"><strong>Estadísticas</strong> </a></li>
-					<li><a class="cur" href="<?= site_url('competencias/contacto'); ?>"><strong>Contacto</strong>
+					<li><a class="cur" href="<?= site_url('Contacto'); ?>"><strong>Contacto</strong>
 					</a></li>
 				</ul>
 			</div>
@@ -74,12 +74,11 @@
 								<li><label for="mensaje">*Tu mensaje:</label> <span
 									class="input-wrap"> <?php echo form_error('textare'); ?> <textarea
 											class="textarea" id="textarea" name="textarea"
-											value="<?php echo set_value('textarea'); ?>"
-											placeholder="Escriba aquí su mensaje" rows="" cols=""></textarea>
+											placeholder="Escriba aquí su mensaje" rows="" cols=""><?php echo set_value('textarea'); ?></textarea>
 								</span></li>
 								<li class="btn-nav"><span class="fl">* Estos son campos
 										requeridos</span> <input id="submit" name="submit"
-									type="submit" class="submit">Enviar</input></li>
+									type="submit" class="submit" value="Enviar"></input></li>
 								</form>
 
 							</ul>

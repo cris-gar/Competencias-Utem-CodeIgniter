@@ -31,11 +31,12 @@
 		<div id="home-page" class="main-wrap">
 			<div id="header" class="mod-con">
 				<ul id="main-menu">
-					<li><a class="cur" href="<?= site_url('Inicio'); ?>"><strong>Inicio</strong>
+					<li><a class="cur" href="<?= site_url('Inicio'); ?>"><strong>Inicio</strong> </a>
+					</li>
+					<li><a href="#"><strong>Académicos</strong> </a></li>
+					<li><a href="#"><strong>Estadísticas</strong> </a></li>
+					<li><a href="<?= site_url('Contacto'); ?>"><strong>Contacto</strong>
 					</a></li>
-					<li><strong>Académicos</strong></li>
-					<li><strong>Estadísticas</strong></li>
-					<li><a href="<?= site_url('Contacto'); ?>"><strong>Contacto</strong></a></li>
 				</ul>
 			</div>
 			<div id="main" class="mod-con">
