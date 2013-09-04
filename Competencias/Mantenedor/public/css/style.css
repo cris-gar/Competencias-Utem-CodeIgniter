@@ -1,0 +1,240 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300,400,700);
+
+body {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	color: #000000;
+	background: #8CBAD6;
+}
+
+.welcome {
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: -150px;
+}
+
+a,a:visited {
+	color: #8F1F08;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ul li {
+	display: inline;
+	margin: 0 1.2em;
+}
+
+p {
+	margin: 2em 0;
+	color: #555;
+}
+
+table {
+	border: 1px solid #000000;
+	background-color: #f2f2f2;
+	width: 100%;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+table th {
+	padding: 5px;
+	color: #ffff00;
+	background-color: #000099;
+}
+
+table td {
+	padding: 5px;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+table thead {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	padding: .2em 0 .2em .5em;
+	text-align: left;
+	color: #4B4B4B;
+	background-color: #C8C8C8;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2),
+		to(#e3e3e3), color-stop(.6, #B3B3B3));
+	background-image: -moz-linear-gradient(top, #D6D6D6, #B0B0B0, #B3B3B3 90%);
+	border-bottom: solid 1px #000000;
+	border-right: 1px solid #000000;
+	border-left: 1px solid #000000;
+}
+
+table th {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	line-height: 20px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: center;
+	border-right: 1px solid #000000;
+	border-left: 1px solid #000000;
+}
+
+table td {
+	line-height: 20px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	border-bottom: 1px solid #000000;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-left: 1px solid #000000;
+}
+
+table td:hover {
+	background-color: #F7F487;
+}
+
+navegador li {
+	display: inline;
+}
+
+#navegador ul {
+	list-style: none;
+	margin: 50px auto;
+	padding: 0;
+}
+
+#navegador a {
+	color: #000000;
+	background: #6b9a6b;
+	font-weight: bold;
+	border: 1px solid #000000;
+	padding: 1em;
+	text-decoration: none;
+}
+
+#navegador a:hover {
+	color: #FFFFFF;
+	background: #3084F1;
+	font-weight: bold;
+	border: 1px solid #000000;
+	text-decoration: underline;
+}
+
+.form {
+	position: relative;
+	margin: 0 auto;
+	padding: 20px 20px 20px;
+	width: 250px;
+	background: white;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px
+		rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px
+		rgba(0, 0, 0, 0.3);
+}
+
+.form:before {
+	content: '';
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	bottom: -8px;
+	left: -8px;
+	z-index: -1;
+	background: rgba(0, 0, 0, 0.08);
+	border-radius: 4px;
+}
+
+.form h1 {
+	margin: -20px -20px 21px;
+	line-height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #555;
+	text-align: center;
+	text-shadow: 0 1px white;
+	background: #f3f3f3;
+	border-bottom: 1px solid #cfcfcf;
+	border-radius: 3px 3px 0 0;
+	background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+	background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+	background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+	background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+	-webkit-box-shadow: 0 1px whitesmoke;
+	box-shadow: 0 1px whitesmoke;
+}
+
+.form p {
+	margin: 1px 0 0;
+	line-height: 40px;
+	font-size: 15px;
+	color: #555;
+	text-align: center;
+	text-shadow: 0 1px white;
+	background: #FFFFFF;
+	background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+	background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+	background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+	background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+	-webkit-box-shadow: 0 1px whitesmoke;
+	box-shadow: 0 1px whitesmoke;
+}
+
+.form p:first-child {
+	margin-top: 0;
+}
+
+.form input[type=text],.form input[type=password] {
+	width: 200px;
+}
+
+.form p.remember_me {
+	float: left;
+	line-height: 31px;
+}
+
+.form p.remember_me label {
+	font-size: 12px;
+	color: #777;
+	cursor: pointer;
+}
+
+.form p.remember_me input {
+	position: relative;
+	bottom: 1px;
+	margin-right: 4px;
+	vertical-align: middle;
+}
+
+.form p.submit {
+	text-align: right;
+}
+
+.form-help {
+	margin: 20px 0;
+	font-size: 11px;
+	color: white;
+	text-align: center;
+	text-shadow: 0 1px #2a85a1;
+}
+
+.form-help a {
+	color: #cce7fa;
+	text-decoration: none;
+}
+
+.form-help a:hover {
+	text-decoration: underline;
+}
+
+.form-help {
+	margin: 20px 0;
+	font-size: 11px;
+	color: white;
+	text-align: center;
+	text-shadow: 0 1px #2a85a1;
+}
