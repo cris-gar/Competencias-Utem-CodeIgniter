@@ -18,8 +18,9 @@ CREATE TABLE departamentos (
 );
 
 DROP TABLE IF EXISTS usuarios CASCADE;
-CREATE TABLE usuarios (
+CREATE TABLE usuarios (	
     usuario_id serial NOT NULL,
+	Rut int NOT NULL,
     nombre varchar(100) NOT NULL,
     permiso boolean DEFAULT false NOT NULL,
     email varchar(150),
@@ -32,6 +33,7 @@ CREATE TABLE usuarios (
     imagen bytea NOT NULL,
     
     UNIQUE (email),
+	UNIQUE (Rut),
     PRIMARY KEY (usuario_id)
 );
 

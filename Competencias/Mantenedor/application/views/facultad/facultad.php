@@ -18,7 +18,7 @@
 	src="<?php echo base_url()?>public/js/jquery.validate.js"></script>
 <script type="text/javascript"
 	src="<?php echo base_url()?>public/js/jquery.validate.min.js"></script>
-	<script type="text/javascript"
+<script type="text/javascript"
 	src="<?php echo base_url()?>public/js/funciones.js"></script>
 </head>
 
@@ -48,7 +48,7 @@
 		if (count ($datos)<=0)
 			echo '<script language="javascript" type="text/javascript">
 			alert("No existen datos");
-			window.location="'.base_url().'"</script>';
+			</script>';
 		else
 			foreach ($datos as $datos)
 			{
