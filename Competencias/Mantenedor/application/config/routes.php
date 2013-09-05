@@ -40,9 +40,16 @@
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
+//permite hacer las url mas amigables
 $route['facultad'] = 'facultad/facultad';
 $route['agregarfacultad'] = 'facultad/agregar';
 $route['editarfacultad'] = 'facultad/editar'; 
+
+$route['departamento'] = 'departamento/departamento';
+$route['agregardepartamento'] = 'departamento/agregar';
+$route['editardepartamento'] = 'departamento/editar';
+
+
 
 //esto fuciona para hacer la url mucho mas simple y amigables
 

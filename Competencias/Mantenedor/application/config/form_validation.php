@@ -20,4 +20,12 @@ $config=array
 
 				array('field' => 'facultad', 'label' => 'Nombre Facultad', 'rules' => 'required|is_string|xss_clean'),
 		),
+		/**
+		 * Formulario para agregar Departamento
+*/
+		'departamento/agregardepartamento'
+		=> array(
+				array('field' => 'departamento', 'label' => 'Nombre Departamento', 'rules' => 'required|is_string|xss_clean'),
+				array('field' => 'departamento_facultad_id',	'label' => 'Nombre Facultad',	'rules' => 'required|xss_clean|validaSelect')
+		),
 );

@@ -30,7 +30,7 @@
 				<li><input type="button" onclick="location='<?= site_url('facultad'); ?>'" name="facultad"
 					value="Facultad" />
 				</li>
-				<li><input type="button" onclick="location='#'" name="departamento"
+				<li><input type="button" onclick="location='<?= site_url('departamento'); ?>'" name="departamento"
 					value="Departamento" />
 				</li>
 				<li><input type="button" onclick="location='#'" name="academico"

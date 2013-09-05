@@ -23,14 +23,14 @@
 </head>
 
 <body>
-	<h1>Facultades</h1>
-		
+	<h1>Departamentos</h1>
+
 	<ul>
-			<li><a href="<?= site_url('mantenedor/index');?>">Volver Atrás</a>
-			</li>
-			<li><a href="<?= site_url('agregarfacultad'); ?>">Agregar</a>
-			</li>
-		</ul>
+		<li><a href="<?= site_url('mantenedor/index');?>">Volver Atrás</a>
+		</li>
+		<li><a href="<?= site_url('agregardepartamento'); ?>">Agregar</a>
+		</li>
+	</ul>
 	<?php 
 	if ( $this->session->flashdata('ControllerMessage') != '' )
 	{
@@ -44,6 +44,7 @@
 	<table>
 		<tr style="background-color: #000; color: #fff;">
 			<th>ID</th>
+			<th>Departamento</th>
 			<th>Facultad</th>
 			<th>Acciones</th>
 		</tr>
@@ -57,12 +58,13 @@
 			{
 				?>
 		<tr style="background-color: #f0f0f0;">
-			<td><?php echo $datos->facultad_id?></td>
+			<td><?php echo $datos->departamento_id?></td>
+			<td><?php echo $datos->departamento?></td>
 			<td><?php echo $datos->facultad?></td>
 			<td><a
-				href="<?php echo base_url()?>index.php/facultad/editar/<?php echo $datos->facultad_id?>">Editar</a>
+				href="<?php echo base_url()?>index.php/departamento/editar/<?php echo $datos->departamento_id?>">Editar</a>
 				|| <a href="javascript:void(0);"
-				onclick="eliminar('<?php echo base_url()?>index.php/facultad/delete/<?php echo $datos->facultad_id?>')">Eliminar</a>
+				onclick="eliminar('<?php echo base_url()?>index.php/departamento/delete/<?php echo $datos->departamento_id?>')">Eliminar</a>
 			</td>
 		</tr>
 		<?php 
