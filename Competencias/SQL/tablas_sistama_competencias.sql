@@ -20,7 +20,7 @@ CREATE TABLE departamentos (
 DROP TABLE IF EXISTS usuarios CASCADE;
 CREATE TABLE usuarios (	
     usuario_id serial NOT NULL,
-	Rut int NOT NULL,
+	Rut varchar(100) NOT NULL,
     nombre varchar(100) NOT NULL,
     permiso boolean DEFAULT false NOT NULL,
     email varchar(150),
@@ -29,8 +29,8 @@ CREATE TABLE usuarios (
     nacionalidad varchar(50) NOT NULL,
     estado_civil varchar(50) NOT NULL,
     fecha_nacimiento date NOT NULL,
+	departamento_id int NOT NULL REFERENCES departamentos(departamento_id) ON UPDATE CASCADE ON DELETE CASCADE,
     fecha_actualizacion timestamp with time zone DEFAULT now() NOT NULL,
-    imagen bytea NOT NULL,
     
     UNIQUE (email),
 	UNIQUE (Rut),
@@ -38,19 +38,9 @@ CREATE TABLE usuarios (
 );
 
 
-DROP TABLE IF EXISTS accesos CASCADE;
-CREATE TABLE accesos (
-    acceso_id bigserial NOT NULL,
-    usuario_fk int NOT NULL REFERENCES usuarios(usuario_id) ON UPDATE CASCADE ON DELETE CASCADE,
-    fecha timestamp NOT NULL DEFAULT NOW(),
-    ip inet NOT NULL DEFAULT '127.0.0.1',
-    PRIMARY KEY (acceso_id)
-);
-
-
 DROP TABLE IF EXISTS estudios CASCADE;
 CREATE TABLE estudios (
-    estudio_id bigserial NOT NULL,
+    estudio_id serial NOT NULL,
     usuario_fk int NOT NULL REFERENCES usuarios(usuario_id) ON UPDATE CASCADE ON DELETE CASCADE,
     titulo varchar(150) NOT NULL,
     grado_academico varchar(100) NOT NULL,
@@ -63,5 +53,14 @@ CREATE TABLE estudios (
     PRIMARY KEY (estudio_id)
 );
 
+
+DROP TABLE IF EXISTS imagen CASCADE;
+CREATE TABLE imagen (
+id serial not null,
+titulo varchar(255) not null,
+ruta varchar(255) not null,
+usuario_fk int NOT NULL REFERENCES usuarios(usuario_id) ON UPDATE CASCADE ON DELETE CASCADE,
+PRIMARY KEY(id)
+);
 
 COMMIT;
