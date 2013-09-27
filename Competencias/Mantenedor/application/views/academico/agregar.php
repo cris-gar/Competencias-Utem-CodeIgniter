@@ -28,7 +28,7 @@ $('#rut').Rut({
 </head>
 
 <body>
-	<h1>Agregar Nueva Facultad</h1>
+	<h1>Agregar Nuevo Academico</h1>
 	<div id="navegador">
 		<ul>
 			<li><a href="<?= site_url('academico');?>">Volver Atrás</a>

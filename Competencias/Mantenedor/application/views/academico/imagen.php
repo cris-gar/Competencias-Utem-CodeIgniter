@@ -2,46 +2,57 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Documento sin t&iacute;tulo</title>
-<style>
-    #formulario_imagenes{
-        width: 500px;
-        padding: 20px 0px 20px 120px;
-        margin: 100px 0px 0px 350px;
-        background-color: teal;
-        color: #fff;
-    }
-    label{
-        display: block;
-    }
-    input[type=text],input[type=file]{
-        padding: 10px;
-        width: 300px;
-        background-color: #444;
-        color: #fff;
-        font-weight: bold;
-    }
-    input[type=submit]{
-        padding: 10px;
-        width: 150px;
-        background-color: #111;
-        color: #fff;
-        font-weight: bold; 
-    }
-</style>
+<meta name="robots" content="index,follow" />
+<meta name="keywords" content=" " />
+<meta name="description" content=" " />
+<title></title>
+<link rel="stylesheet"
+	href="<?php echo base_url()?>public/css/style.css" type="text/css" />
+<script type="text/javascript"
+	src="<?php echo base_url()?>public/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript"
+	src="<?php echo base_url()?>public/js/jquery.Rut.min.js"></script>
+<script type="text/javascript"
+	src="<?php echo base_url()?>public/js/jquery.Rut.js"></script>
+<script type="text/javascript"
+	src="<?php echo base_url()?>public/js/jquery.validate.js"></script>
+<script type="text/javascript"
+	src="<?php echo base_url()?>public/js/jquery.validate.min.js"></script>
+<script type="text/javascript"
+	src="<?php echo base_url()?>public/js/funciones.js"></script>
 </head>
-
 <body>
-    <!--$ERROR MUESTRA LOS ERRORES QUE PUEDAN HABER AL SUBIR LA IMAGEN-->
-    <?=@$error?>
-<div id="formulario_imagenes">
-    <span><?php echo validation_errors(); ?></span>
-<?=form_open_multipart(null)?>
-    <label>Título:</label><input type="text" name="titulo" />
-    <label>Imagen 1:</label><input type="file" name="userfile" /><br /><br />
-    <input type="hidden" name="id" value="<?php echo $id?>" />
-    <input type="submit" value="Subir imágenes" />
-<?=form_close()?>
-</div>
+	<h1>Agregar Imagen</h1>
+	<div id="navegador">
+		<ul>
+			<li><a href="<?= site_url('academico');?>">Volver Atrás</a>
+			</li>
+
+		</ul>
+		<!--$ERROR MUESTRA LOS ERRORES QUE PUEDAN HABER AL SUBIR LA IMAGEN-->
+		<?=@$error?>
+		<section class="container">
+			<div class="form">
+				<span><?php echo validation_errors(); ?> </span>
+				<?=form_open_multipart(null)?>
+				<p>
+					<label>Título:</label>
+				</p>
+				<p>
+					<input type="text" name="titulo" />
+				</p>
+				<p>
+					<label>Imagen 1:</label>
+				</p>
+				<p>
+					<input type="file" name="userfile" /><br /> <br />
+				</p>
+				<input type="hidden" name="id" value="<?php echo $id?>" />
+				<p>
+					<input type="submit" value="Subir imágenes" />
+				</p>
+				<?=form_close()?>
+			</div>
+
 </body>
 </html>

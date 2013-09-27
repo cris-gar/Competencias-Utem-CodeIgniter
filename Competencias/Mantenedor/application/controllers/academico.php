@@ -65,8 +65,6 @@ class Academico extends CI_Controller {
 				//SI LA IMAGEN FALLA AL SUBIR MOSTRAMOS EL ERROR EN LA VISTA UPLOAD_VIEW
 				if (!$this->upload->do_upload()) {
 					$error = array('error' => $this->upload->display_errors());
-					$this->load->view('academico/imagen', $error);
-					print_r($error);
 				} else {
 					//EN OTRO CASO SUBIMOS LA IMAGEN, CREAMOS LA MINIATURA Y HACEMOS
 					//ENVÍAMOS LOS DATOS AL MODELO PARA HACER LA INSERCIÓN
@@ -78,13 +76,16 @@ class Academico extends CI_Controller {
 					$titulo = $this->input->post('titulo');
 					$imagen = $file_info['file_name'];
 					$subir = $this->academico_model->subir($titulo,$imagen,$id);
-					$data['titulo'] = $titulo;
-					$data['imagen'] = $imagen;
-					$this->load->view('academico/academico');
+					if($subir)
+					{
+						$this->session->set_flashdata('ControllerMessage', 'Se ha agregado el registro exitosamente.');
+						redirect('academico',  301);
+					}else
+					{
+						$this->session->set_flashdata('ControllerMessage', 'Se ha producido un error. Inténtelo nuevamente por favor.');
+						redirect('academico/imagen'.$id,  301);
+					}
 				}
-			}else{
-				//SI EL FORMULARIO NO SE VÁLIDA LO MOSTRAMOS DE NUEVO CON LOS ERRORES
-				$this->index();
 			}
 		}
 		$this->load->view('academico/imagen',compact("id"));
