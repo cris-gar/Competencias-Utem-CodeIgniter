@@ -33,7 +33,7 @@
 				<ul id="main-menu">
 					<li><a class="cur" href="<?= site_url('Inicio'); ?>"><strong>Inicio</strong> </a>
 					</li>
-					<li><a href="#"><strong>Académicos</strong> </a></li>
+					<li><a href="<?= site_url('Academicos'); ?>"><strong>Académicos</strong> </a></li>
 					<li><a href="#"><strong>Estadísticas</strong> </a></li>
 					<li><a href="<?= site_url('Contacto'); ?>"><strong>Contacto</strong>
 					</a></li>

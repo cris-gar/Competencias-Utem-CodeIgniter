@@ -44,6 +44,7 @@ $route['404_override'] = '';
 //esto fuciona para hacer la url mucho mas simple y amigables
 $route['Inicio'] = 'competencias/index';
 $route['Contacto'] = 'competencias/contacto';
+$route['Academicos'] = 'competencias/academico';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
